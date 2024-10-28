@@ -1,9 +1,10 @@
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1081px) {
   %page-style {
-    width: ROUND(60%, 2px);
+    width: ROUND(40%, 2px);
+    min-width: 756px !important;
 
     [data-page-style='wide'] & {
-      width: ROUND(64%, 2px);
+      width: ROUND(44%, 2px);
     }
 
     [data-page-style='narrow'] & {
@@ -12,39 +13,12 @@
   }
 }
 
-@media only screen and (max-width: 1440px) {
+
+@media only screen and (max-width: 1080px) {
   %page-style {
-    width: ROUND(56%, 2px);
-
-    [data-page-style='wide'] & {
-      width: ROUND(60%, 2px);
-    }
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  %page-style {
-    width: ROUND(52%, 2px);
-
-    [data-page-style='wide'] & {
-      width: ROUND(56%, 2px);
-    }
+    width: ROUND(70%, 2px) !important;
   }
 
-  #header-desktop .header-wrapper {
-    padding-right: 1rem;
-  }
-
-  .search-dropdown.desktop {
-    right: 1rem;
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  %page-style {
-    width: ROUND(80%, 2px) !important;
-  }
-  
   aside {
     display: none !important;
   }
@@ -58,14 +32,20 @@
   }
 }
 
-@media only screen and (min-width: 681px) {
+@media only screen and (min-width: 810px) {
   .d-none-desktop {
     display: none;
   }
+
+  %page-style {
+    min-width: 756px;
+  }
+
   .breadcrumb-container.sticky {
     body:not([data-header-desktop='sticky']) & {
       top: 0;
     }
+
     // adjust the scroll margin top of the content anchors on the page
     body:not([data-header-desktop='auto']) &+.container .content [id] {
       scroll-margin-top: calc(var(--#{$prefix}scroll-mt) + var(--#{$prefix}breadcrumb-height));
@@ -77,7 +57,7 @@
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 810px) {
   #header-desktop {
     display: none;
   }
@@ -94,6 +74,7 @@
     body:not([data-header-mobile='sticky']) & {
       top: 0;
     }
+
     // adjust the scroll margin top of the content anchors on the page
     body:not([data-header-mobile='auto']) &+.container .content [id] {
       scroll-margin-top: calc(var(--#{$prefix}scroll-mt) + var(--#{$prefix}breadcrumb-height));
@@ -103,12 +84,13 @@
   [data-header-mobile='normal'] .page .content [id] {
     --#{$prefix}scroll-mt: #{$global-scroll-margin-top};
   }
-  
+
   %page-style {
     width: 100% !important;
   }
 
   .page {
+
     .categories-card,
     .collections-card {
       .card-item {
@@ -139,6 +121,7 @@
     padding-top: 0 !important;
 
     &.single {
+
       .single-title,
       .single-subtitle,
       .post-meta {

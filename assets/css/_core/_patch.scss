@@ -23,43 +23,47 @@
  * After the CSS round() function exceeds 90% browser support in the future, this code can be removed
  * See https://caniuse.com/mdn-css_types_round
  */
-@supports not (width: ROUND(60%, 2px)) {
+@supports not (width: ROUND(50%, 2px)) {
   @media only screen and (min-width: 1441px) {
     %page-style {
-      width: 60%;
-  
+      width: 50%;
+
       [data-page-style='wide'] & {
-        width: 64%;
+        width: 54%;
       }
-  
+
       [data-page-style='narrow'] & {
         max-width: 800px;
       }
     }
   }
+
   @media only screen and (max-width: 1440px) {
     %page-style {
-      width: 56%;
-  
+      width: 46%;
+
       [data-page-style='wide'] & {
-        width: 60%;
+        width: 50%;
       }
     }
   }
+
   @media only screen and (max-width: 1200px) {
     %page-style {
-      width: 52%;
-  
+      width: 42%;
+
       [data-page-style='wide'] & {
-        width: 56%;
+        width: 46%;
       }
     }
   }
+
   @media only screen and (max-width: 960px) {
     %page-style {
-      width: 80% !important;
+      width: 70% !important;
     }
   }
+
   @media only screen and (max-width: 680px) {
     %page-style {
       width: 100% !important;
